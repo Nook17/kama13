@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Post;
+
 class KamaController extends Controller
 {
  public function index()
@@ -11,7 +14,17 @@ class KamaController extends Controller
 
  public function blog()
  {
-  return view('blog');
+  $posts      = Post::all();
+  $categories = Category::all();
+
+  return view('blog', compact('posts', 'categories'));
+ }
+
+ public function post(Post $post)
+ {
+  $categories = Category::all();
+
+  return view('post', compact('post', 'categories'));
  }
 
  public function about()

@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Post;
+
 class AdminController extends Controller
 {
- public function __construct()
- {
-  $this->middleware('auth');
- }
-
  public function index()
  {
-  return view('admin.index');
+  $posts      = Post::all();
+  $categories = Category::all();
+
+  return view('admin.index', compact('posts', 'categories'));
  }
 }

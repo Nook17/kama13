@@ -14,7 +14,7 @@
       <img src="{{ asset('/img/faces/mama.JPG') }}" />
      </div>
      <div class="user-info">
-      <a href="dashboard.html#collapseExample" class="username">
+      <a href="{{ route('admin') }}" class="username">
        <span>Wioletta DEMKO</span>
       </a>
      </div>
@@ -22,18 +22,62 @@
 
     <ul class="nav">
      <li class="nav-item ">
-      <a class="nav-link" data-toggle="collapse" href="#">
+      <a class="nav-link" href="{{ route('admin') }}">
        <i class="material-icons">apps</i>
-       <p>Kama 13</p>
+       <p>Admin Panel</p>
       </a>
      </li>
      <li class="nav-item ">
-      <a class="nav-link" data-toggle="collapse" href="#">
-       <i class="material-icons">image</i>
-       <p>Blog</p>
+      <a class="nav-link" href="{{ route('post.index') }}">
+       <i class="material-icons">web</i>
+       <p>Posty</p>
+      </a>
+     </li>
+     <li class="nav-item ">
+      <a class="nav-link" href="{{ route('category.index') }}">
+       <i class="material-icons">category</i>
+       <p>Kategorie</p>
       </a>
      </li>
     </ul>
 
    </div>
   </div>
+
+  <div class="main-panel">
+    <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top" id="navigation-example">
+    <div class="container-fluid">
+     <div class="navbar-wrapper">
+      <div class="navbar-minimize">
+       <button id="minimizeSidebar" class="btn btn-just-icon btn-white btn-fab btn-round">
+        <i class="material-icons text_align-center visible-on-sidebar-regular">more_vert</i>
+        <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
+       </button>
+      </div>
+      <a class="navbar-brand" href="dashboard.html#pablo">Mini Menu</a>
+     </div>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+     </button>
+     <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav">
+       <li class="nav-item">
+        <a href="{{ url('/logout') }}"
+        onclick="event.preventDefault();
+                 document.getElementById('logout-form').submit();">
+                 <i class="material-icons">power_settings_new</i>
+                </a>
+         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+          @csrf
+         </form>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav> <!-- End Navbar -->
+    

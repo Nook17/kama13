@@ -18,6 +18,7 @@
  <link href="{{ asset('css/paper-kit/bootstrap.min.css') }}" rel="stylesheet" />
  <link href="{{ asset('css/paper-kit/paper-kit.min-v=2.2.1.css') }}" rel="stylesheet" />
  <!-- CSS Just for demo purpose, don't include it in your project -->
- <link href="{{ asset('css/paper-kit/demo.css') }}" rel="stylesheet" />
+ {{-- <link href="{{ asset('css/paper-kit/demo.css') }}" rel="stylesheet" /> --}}
+ <link href="{{ asset('css/main.css') }}" rel="stylesheet" />
 
 </head>

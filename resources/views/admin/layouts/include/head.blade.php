@@ -11,7 +11,5 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
  <!-- CSS Files -->
  <link href="{{ asset('admin/css/material-dashboard-pro/material-dashboard.min-v=2.0.2.css') }}" rel="stylesheet" />
- <!-- CSS Just for demo purpose, don't include it in your project -->
- {{-- <link href="../assets/css/material-dashboard-pro/demo.css" rel="stylesheet" /> --}}
  
  </head>

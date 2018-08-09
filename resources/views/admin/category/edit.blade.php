@@ -11,7 +11,7 @@
             </div>
           </div>
           <div class="card-body ">
-          <form method="POST" action="{{ route('category.update', $category->id) }}" class="form-horizontal">
+          <form method="POST" action="{{ route('category.update', $category->slug) }}" class="form-horizontal">
             @csrf
             @method('PATCH')
 

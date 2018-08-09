@@ -11,6 +11,11 @@ class Category extends Model
   $this->belongsToMany('App\post', 'category_posts');
  }
 
+ public function manufactures()
+ {
+  $this->belongsToMany('App\Manufacture', 'picture_manufactures');
+ }
+
  public function getRouteKeyName()
  {
   return 'slug';

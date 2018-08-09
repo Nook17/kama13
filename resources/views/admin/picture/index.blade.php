@@ -8,51 +8,54 @@
      <div class="card">
       <div class="card-header card-header-primary card-header-icon">
        <div class="card-icon">
-        <i class="material-icons">category</i>
+        <i class="material-icons">camera</i>
        </div>
-       <h4 class="card-title">Kategorie</h4>
+       <h4 class="card-title">Galeria</h4>
       </div>
       <div class="card-body">
        <div class="toolbar text-center">
-        <a href="{{ route('category.create') }}" class="btn btn-success">Dodaj Kategorię</a>
+        <a href="{{ route('picture.create') }}" class="btn btn-success">Dodaj Galerię</a>
        </div>
        <div class="material-datatables">
         <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
          <thead>
           <tr>
            <th>Lp</th>
-           <th>Nazwa Kategori</th>
-           <th>Slug</th>
+           <th>Opis</th>
+           <th>Zdjęcia</th>
+           <th>Data</th>
            <th class="disabled-sorting text-right">Actions</th>
           </tr>
          </thead>
          <tfoot>
           <tr>
            <th>Lp</th>
-           <th>Nazwa Kategori</th>
-           <th>Slug</th>
+           <th>Opis</th>
+           <th>Zdjęcia</th>
+           <th>Data</th>
            <th class="text-right">Actions</th>
           </tr>
          </tfoot>
          <tbody>
-          @foreach($categories as $category)
+          @foreach($pictures as $picture)
            <tr>
-            <td>{{ $category->id }}</td>
-            <td>{{ $category->name }}</td>
-            <td>{{ $category->slug }}</td>
+            <td>{{ $picture->id }}</td>
+            <td>{{ $picture->description }}</td>
+            <td><img src="{{ asset('storage/' . $picture->img) }}" alt="Zdjęcie" width="100"></td>
+            <td>{{ $picture->created_at }}</td>
             <td class="text-right">
-             <a href="{{ route('category.edit', $category->slug) }}" class="btn btn-link btn-success btn-just-icon edit">
+             <a href="{{ route('picture.edit', $picture->id) }}" class="btn btn-link btn-success btn-just-icon edit">
               <i class="material-icons">dvr</i>
              </a>
 
-             <form action="{{ route('category.destroy' , $category->slug) }}" method="post" id="delete-form-{{$category->id}}" style="display: none;">
+             <form action="{{ route('picture.destroy' , $picture->id) }}" method="post" id="delete-form-{{$picture->id}}" style="display: none;">
                 @csrf
                 @method('DELETE')
               </form>
               <a href="" onclick="
                 if(confirm('Jesteś pewny, że chcesz to USUNĄĆ ???')) {
                   event.preventDefault();
-                  document.getElementById('delete-form-{{$category->id}}').submit();
+                  document.getElementById('delete-form-{{$picture->id}}').submit();
                 } else {
                     event.preventDefault();
                   }" class="btn btn-link btn-danger btn-just-icon remove">

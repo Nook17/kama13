@@ -3,8 +3,8 @@
  <div class="wrapper ">
  
   <div class="sidebar" data-color="rose" data-background-color="black" data-image="">
-   <div class="logo">
-    <a href="http://www.creative-tim.com" class="simple-text logo-normal">Fiolka - Admin</a>
+   <div class="logo text-center">
+    <a href="{{ route('index') }}" class="simple-text" target="blank">Kama 13</a>
    </div>
 
    <div class="sidebar-wrapper">
@@ -25,6 +25,18 @@
       <a class="nav-link" href="{{ route('admin') }}">
        <i class="material-icons">apps</i>
        <p>Admin Panel</p>
+      </a>
+     </li>
+     <li class="nav-item ">
+      <a class="nav-link" href="{{ route('manufacture.index') }}">
+       <i class="material-icons">gavel</i>
+       <p>Produkcja</p>
+      </a>
+     </li>
+     <li class="nav-item ">
+      <a class="nav-link" href="{{ route('picture.index') }}">
+       <i class="material-icons">camera</i>
+       <p>Zdjęcia</p>
       </a>
      </li>
      <li class="nav-item ">
@@ -55,7 +67,7 @@
         <i class="material-icons design_bullet-list-67 visible-on-sidebar-mini">view_list</i>
        </button>
       </div>
-      <a class="navbar-brand" href="dashboard.html#pablo">Mini Menu</a>
+      <a class="navbar-brand" href="">Mini Menu</a>
      </div>
      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
       <span class="sr-only">Toggle navigation</span>

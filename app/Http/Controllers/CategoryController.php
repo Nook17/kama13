@@ -30,19 +30,12 @@ class CategoryController extends Controller
   $category->name = $request->name;
   $category->slug = $request->slug;
   $category->save();
-
   return back();
  }
 
- public function show(Category $category)
- {
-  //
- }
-
- public function edit(Category $category)
+public function edit(Category $category)
  {
   $category = Category::findOrFail($category->id);
-
   return view('admin.category.edit', compact('category'));
  }
 

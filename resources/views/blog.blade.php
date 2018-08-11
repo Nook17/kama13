@@ -39,7 +39,7 @@
        </h3>
        {{-- <p class="card-description">{!! htmlspecialchars_decode(substr($post->content, 0, 250)) !!} ...</p> --}}
        <br/>
-       <a href="post.html" class="btn btn-outline-success btn-sm btn-round"> Czytaj więcej</a>
+       <a href="{{ route('post', $post->slug) }}" class="btn btn-outline-success btn-sm btn-round"> Czytaj więcej</a>
       </div>
      </div>
     </div>

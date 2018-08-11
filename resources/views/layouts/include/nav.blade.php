@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg fixed-top nav-down navbar-transparent" color-on-scroll="500">
  <div class="container">
   <div class="navbar-translate">
-   <a class="navbar-brand" href="index.html" rel="tooltip" title="Kama13" data-placement="bottom" target="_blank">
+   <a class="navbar-brand" href="{{ route('index') }}" rel="tooltip" title="Kama13" data-placement="bottom" >
     Kama 13
    </a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"

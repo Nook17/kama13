@@ -58,8 +58,8 @@ class KamaController extends Controller
   );
 
   Mail::send('emails.newContact', $data, function ($message) use ($data) {
-   $message->to('admin@nook17.pl');
-   $message->from('admin@nook17.pl');
+   $message->to('fiolka@nook17.pl');
+   $message->from('fiolka@nook17.pl');
    $message->subject($data['subject']);
   });
 
@@ -89,14 +89,14 @@ class KamaController extends Controller
   );
 
   Mail::send('emails.newNewsletter', $data, function ($message) use ($data) {
-   $message->to('admin@nook17.pl');
-   $message->from('admin@nook17.pl');
+   $message->to('fiolka@nook17.pl');
+   $message->from('fiolka@nook17.pl');
    $message->subject($data['subject']);
   });
 
   Mail::send('emails.userNewsletter', $data, function ($message) use ($data) {
    $message->to($data['email']);
-   $message->from('admin@nook17.pl');
+   $message->from('fiolka@nook17.pl');
    $message->subject($data['subject']);
   });
 
@@ -108,9 +108,31 @@ class KamaController extends Controller
   return view('newsletter.newsletter_send');
  }
 
- public function newsletter_delete()
+ public function newsletter_delete($code)
  {
+  $users = DB::table('newsletters')->where('code', $code)->get();
+  // $user = array_values(array_sort($user, function($value) {
 
+  //     return $value($email);
+  // }));
+  foreach ($users as $user) {
+  }
+  // return $user->email;
+  // return dd($user);
+
+  $data = array(
+   'email'   => $user->email,
+   'subject' => 'Newsletter ze strony Kama 13 - Puszek Kłębuszek',
+  );
+
+  Mail::send('emails.deleteNewsletter', $data, function ($message) use ($data) {
+   $message->to('fiolka@nook17.pl');
+   $message->from('fiolka@nook17.pl');
+   $message->subject($data['subject']);
+  });
+  newsletter::where('code', $code)->delete();
+
+  return view('newsletter.newsletter_delete');
  }
 
  public function newsletter_post()

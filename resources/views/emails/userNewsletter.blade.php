@@ -289,11 +289,11 @@
             <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 500px;" class="responsive-table">
                 <tr>
                     <td align="center" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
-                        Copyright &copy;&nbsp;{{ date('Y') }}&nbsp;<a href="mailto:admin@nook17.pl" class="btn btn-simple" style="padding: 5px;"> admin@nook17.pl </a>&nbsp;‐&nbsp;All Rights Reserved                        
+                        Copyright &copy;&nbsp;{{ date('Y') }}&nbsp;<a href="mailto:fiolka@nook17.pl" class="btn btn-simple" style="padding: 5px;"> fiolka@nook17.pl </a>&nbsp;‐&nbsp;All Rights Reserved                        
                         <br>
                         <a href="http://localhost:8000/newsletter_delete/{{ $code }}" target="_blank" style="color: #666666; text-decoration: none;">Unsubscribe </a>
                         <span style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <a href="http://nook17.pl" target="_blank" style="color: #666666; text-decoration: none;"> Nook17.pl</a>
+                        <a href="http://kama13.pl" target="_blank" style="color: #666666; text-decoration: none;"> Kama13.pl</a>
                     </td>
                 </tr>
             </table>

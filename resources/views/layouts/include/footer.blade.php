@@ -4,7 +4,7 @@
    <nav class="footer-nav">
     <ul>
      <li>
-      <a href="{{ route('index') }}" target="_blank">Puszek</a>
+      <a href="{{ route('index') }}" target="_blank">Galeria</a>
      </li>
      <li>
       <a href="{{ route('blog') }}" target="_blank">Blog</a>

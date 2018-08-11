@@ -1,4 +1,4 @@
-<body class="index-page sidebar-collapse">
+<body class="index-page sidebar-collapse contact-page">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top nav-down navbar-transparent" color-on-scroll="500">
@@ -16,8 +16,8 @@
   </div>
   <div class="collapse navbar-collapse" data-nav-image="assets/img/photo-index.jpg" data-color="orange">
    <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-     <a class="nav-link" href="{{ route('index') }}">Puszek</a>
+    <li class="nav-item n_taxt_nav">
+     <a class="nav-link" href="{{ route('index') }}">Galeria</a>
     </li>
     <li class="nav-item">
      <a class="nav-link" href="{{ route('blog') }}">Blog</a>

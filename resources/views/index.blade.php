@@ -19,48 +19,22 @@
 
    <div class="row">
     <div class="col-md-8 ml-auto mr-auto text-center">
-     <h2 class="title">Some of Our Awesome Products - 1</h2>
-     <h5 class="description"> This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.</h5>
+     <h2 class="title">Moje małe dzieła</h2>
+     <h5 class="description">Zobacz czym się zajmuję w wolnych chwilach</h5>
     </div>
     <div class="project-pills">
      <ul class="nav nav-pills nav-pills-danger">
         <li class="nav-item">
           <a class="nav-link active" href="{{ route('index') }}" >Wszytkie</a>
         </li>
-      @foreach($categories as $category)
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('index_category', $category->id) }}" >{{ $category->name }}</a>
-        </li>
-      @endforeach
-{{--       <li class="nav-item">
-       <a class="nav-link active" data-toggle="pill" href="sections.html#pill-2" role="tab">Marketing</a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" data-toggle="pill" href="sections.html#pill-3" role="tab">Development</a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" data-toggle="pill" href="sections.html#pill-4" role="tab">Productivity</a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" data-toggle="pill" href="sections.html#pill-5" role="tab">Web Design</a>
-      </li> --}}
-     </ul>
-     <!-- Pill panes -->
-{{--      <div class="tab-content">
-      @foreach($manufactured as $manufacture)
-        <div class="tab-pane" id="@foreach($manufacture->categories as $category){{ $category->name }}@endforeach" role="tabpanel">        
-
-        </div>
-      @endforeach
-      <div class="tab-pane active" id="pill-2" role="tabpanel"></div>
-      <div class="tab-pane" id="pill-3" role="tabpanel"></div>
-      <div class="tab-pane" id="pill-4" role="tabpanel"></div>
-      <div class="tab-pane" id="pill-5" role="tabpanel"></div>
-      <div class="tab-pane" id="pill-6" role="tabpanel"></div>
-     </div> --}}
+        @foreach($categories as $category)
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('index_category', $category->id) }}" >{{ $category->name }}</a>
+          </li>
+        @endforeach
+    </ul>
     </div>
   </div>
-  {{-- <a class="btn btn-danger" href="{{ route('index_category', '2') }}" >Link</a> --}}
   <div class="row">
     @foreach($manufactured as $manufacture)
      <div class="col-md-6">
@@ -72,12 +46,12 @@
            @endforeach
          </h6>
          <h3 class="card-title">{{ $manufacture->title }}</h3>
-         <p class="card-description">
+         {{-- <p class="card-description">
           {!! htmlspecialchars_decode(substr($manufacture->content, 0, 150)) !!}
-         </p>
+         </p> --}}
          <br/>
-         <a href="sections.html#pablo" class="btn btn-outline-primary btn-round btn-sm">
-          <i class="fa fa-book" aria-hidden="true"></i> Czytaj
+         <a href="{{ route('gallery', ['id_manufacture' => $manufacture->id, 'id_picture' => $manufacture->pictures->first()->id, 'slug' => $manufacture->slug]) }}" class="btn btn-outline-primary btn-round btn-sm">
+          <i class="fa fa-book" aria-hidden="true"></i> Zobacz
          </a>
        </div>
       </div>
@@ -89,18 +63,24 @@
  </div> <!-- projects-1 -->
 </div> <!-- section -->
 
-<!--     *********    NEWSLETTER      *********      -->
+<!-- ********* NEWSLETTER ********* -->
 <div class="subscribe-line subscribe-line-transparent" style="background-image: url('/img/sections/technology.jpg')">
  <div class="container">
   <div class="row">
    <div class="col-lg-9 col-md-8 col-sm-8">
-    <form class="">
+    <form method="POST" action="{{ route('newsletter_send') }}" class="">
+      @csrf
      <div class="form-group">
-      <input type="text" value="" class="form-control" placeholder="Podaj swój email...">
+      <input type="text" name="email" value="{{ old('email') }}" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Podaj swój email...">
+        @if ($errors->has('email'))
+          <span class="invalid-feedback" role="alert">
+            <strong>{{ $errors->first('email') }}</strong>
+          </span>
+        @endif
      </div>
     </div>
     <div class="col-md-3 col-sm-4">
-     <button type="button" class="btn btn-outline-info btn-block btn-round">Subskrybuj</button>
+     <button type="submit" class="btn btn-outline-info btn-block btn-round">Subskrybuj</button>
     </div>
    </form>
   </div>

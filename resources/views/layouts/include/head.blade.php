@@ -14,6 +14,7 @@
  <!-- Fonts and icons -->
  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=latin-ext" rel="stylesheet">
  <!-- CSS Files -->
  <link href="{{ asset('css/paper-kit/bootstrap.min.css') }}" rel="stylesheet" />
  <link href="{{ asset('css/paper-kit/paper-kit.min-v=2.2.1.css') }}" rel="stylesheet" />

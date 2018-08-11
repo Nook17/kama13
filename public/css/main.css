@@ -7,3 +7,41 @@
 .navbar {
   background-color: rgba(255, 255, 255, 0.5);
 }
+.section,
+[class*="projects-"] {
+  padding: 0;
+}
+.contact-page .section:first-of-type, .discover .section:first-of-type, .search-page .section:first-of-type {
+  padding-top: 2rem;
+}
+.nav-link {
+  color: #c8c8c8;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  transition: 0.5s all;
+}
+.nav-link:hover {
+  color: #ababab;
+  text-shadow: 0 0 5px #2c9833;
+  /*transform: scale(1.2);*/
+}
+.n_section_transparent {
+  background-color: rgba(100, 100, 100, 0.9);
+  color: #fff;
+}
+.n_placeholder .form-control::-moz-placeholder {
+  color: #34c293;
+}
+.n_placeholder .form-control:-ms-input-placeholder {
+  color: #34c293;
+}
+.n_placeholder .form-control::-webkit-input-placeholder {
+  color: #34c293;
+}
+#contact-us .contactus-1 .description,
+#contact-us .contactus-1 .info-title {
+  color: #fff !important;
+}
+.card .n_card,
+.n_text_black {
+  color: #000;
+}

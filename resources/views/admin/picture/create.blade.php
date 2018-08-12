@@ -20,10 +20,25 @@
                 <div class="form-group">
                   <input type="text" name="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" placeholder="Opis galerii" value="{{ old('description') }}">
                   @if ($errors->has('description'))
-                  <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('description') }}</strong>
-                  </span>
-                @endif
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('description') }}</strong>
+                    </span>
+                  @endif
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <label class="col-sm-2 col-form-label">Rozdzielczość</label>
+              <div class="col-sm-10">
+                <div class="form-group">
+                  <input type="text" name="resolution" class="form-control{{ $errors->has('resolution') ? ' is-invalid' : '' }}" placeholder="1440x960" value="{{ old('resolution') }}">
+                  <div class="category form-category text-success">Pomiń zostawiając wartość domyślną <b>1440x960</b> lub zmień</div>
+                  @if ($errors->has('resolution'))
+                    <span class="invalid-feedback" role="alert">
+                      <strong>{{ $errors->first('resolution') }}</strong>
+                    </span>
+                  @endif
                 </div>
               </div>
             </div>

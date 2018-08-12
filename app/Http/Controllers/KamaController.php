@@ -150,7 +150,8 @@ class KamaController extends Controller
  public function post(Post $post)
  {
   $categories = Category::all();
-  return view('post', compact('post', 'categories'));
+  $last_posts = DB::table('posts')->where('id', '!=', $post->id)->orderBy('created_at', 'DESC')->paginate(3);
+  return view('post', compact('post', 'categories', 'last_posts'));
  }
 
  public function about()

@@ -18,7 +18,7 @@
      <p>Fakt faktem jest, że trzeba było się nagimnastykować, pogłówkować i chyba to sprawiało mi taką frajdę.</p>
      <h3 class="title-uppercase">My
        <i class="fa fa-heart heart"></i>&nbsp; to co robimy.</h3>
-     <p>Od zawsze w proacy pomagały mi dzieci. Były moją największą inspiracją i motywacją do dalszego działania. Fajnie mieć dla kogo poświęcać swój czas no i w końcu miło od kogoś usłyszeć pochwały ...</p>
+     <p>Od zawsze w pracy pomagały mi dzieci. Były moją największą inspiracją i motywacją do dalszego działania. Fajnie mieć dla kogo poświęcać swój czas no i w końcu miło od kogoś usłyszeć pochwały ...</p>
      <h2 class="text-center creators">Ja i moja rodzinka</h2>
      <div class="row">
        <div class="col-md-4">

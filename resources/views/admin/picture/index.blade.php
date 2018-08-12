@@ -22,6 +22,7 @@
           <tr>
            <th>Lp</th>
            <th>Opis</th>
+           <th>Format</th>
            <th>Zdjęcia</th>
            <th>Data</th>
            <th class="disabled-sorting text-right">Actions</th>
@@ -31,6 +32,7 @@
           <tr>
            <th>Lp</th>
            <th>Opis</th>
+           <th>Format</th>
            <th>Zdjęcia</th>
            <th>Data</th>
            <th class="text-right">Actions</th>
@@ -41,6 +43,7 @@
            <tr>
             <td>{{ $picture->id }}</td>
             <td>{{ $picture->description }}</td>
+            <td>{{ $picture->resolution }}</td>
             <td><img src="{{ asset('storage/' . $picture->img) }}" alt="Zdjęcie" width="100"></td>
             <td>{{ $picture->created_at }}</td>
             <td class="text-right">

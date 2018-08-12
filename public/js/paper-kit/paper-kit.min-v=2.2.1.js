@@ -260,7 +260,7 @@ function hasScrolled() {
 }
 (demo = {
   initContactUsMap: function() {
-    var e = new google.maps.LatLng(54.2, 21.75),
+    var e = new google.maps.LatLng(54.204046, 21.751334),
       t = {
         zoom: 16,
         center: e,
@@ -356,7 +356,7 @@ function hasScrolled() {
     }).setMap(o);
   },
   initContactUsMap2: function() {
-    var e = new google.maps.LatLng(54.2, 21.75),
+    var e = new google.maps.LatLng(54.204046, 21.751334),
       t = {
         zoom: 16,
         center: e,

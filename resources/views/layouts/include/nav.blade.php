@@ -14,7 +14,7 @@
     <span class="navbar-toggler-bar bar3"></span>
    </button>
   </div>
-  <div class="collapse navbar-collapse" data-nav-image="assets/img/photo-index.jpg" data-color="orange">
+  <div class="collapse navbar-collapse" data-nav-image="" data-color="orange">
    <ul class="navbar-nav ml-auto">
     <li class="nav-item n_taxt_nav">
      <a class="nav-link" href="{{ route('index') }}">Galeria</a>

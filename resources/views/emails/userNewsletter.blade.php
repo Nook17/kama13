@@ -236,7 +236,7 @@
                                                             <td style="padding: 20px 0 30px 0;">
                                                                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                                                     <tr>
-                                                                        <td align="center" bgcolor="#F5F7FA" valign="middle"><a href="{{ route('post', $post->slug) }}" target="_blank"><img src="{{ asset('storage/post/' . $post->img) }}" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid images" border="0" class="img-max"></a></td>
+                                                                        <td align="center" bgcolor="#F5F7FA" valign="middle"><a href="{{ route('post', $post->slug) }}" target="_blank"><img src="{{ asset('storage/' . $post->img) }}" width="240" height="130" style="display: block; color: #666666; font-family: Helvetica, arial, sans-serif; font-size: 13px; width: 240px; height: 130px;" alt="Fluid images" border="0" class="img-max"></a></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td align="center" style="padding: 15px 0 0 0; font-family: Arial, sans-serif; color: #333333; font-size: 20px;" bgcolor="#F5F7FA">{{ $post->title }}</a> 

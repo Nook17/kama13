@@ -147,7 +147,7 @@
                             <tr>
                                 <td class="padding" align="center">
                                     <a href="{{ route('post', $post->slug) }}" target="_blank">
-                                        <img src="{{ asset('storage/posts/' . $post->image) }}" width="500" height="400" border="0" alt="Insert alt text here" style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;" class="img-max">
+                                        <img src="{{ asset('storage/' . $post->img) }}" width="500" height="400" border="0" alt="Insert alt text here" style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;" class="img-max">
                                     </a>
                                 </td>
                             </tr>

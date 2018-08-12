@@ -18,10 +18,6 @@
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto text-center title">
             <h2>{{ $gallery->title }}</h2>
-            {{-- <h3 class="title-uppercase"> --}}
-              {{-- <small>{{ $post->subtitle }}</small> --}}
-              {{-- <small>Podtytuł</small> --}}
-            {{-- </h3> --}}
           </div>
         </div>
 
@@ -42,21 +38,14 @@
 <div class="section section-blue javascript-components">
  <div class="container">
 
-{{--   <div class="title">
-   <h3>Galeria</h3>
-  </div> --}}
-
   <!-- gallery -->
   <!-- Root element of PhotoSwipe. Must have class pswp -->
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-   <!-- Background of PhotoSwipe.
-                      It's a separate element as animating opacity is faster than rgba(). -->
+   <!-- Background of PhotoSwipe. It's a separate element as animating opacity is faster than rgba(). -->
    <div class="pswp__bg"></div>
    <!-- Slides wrapper with overflow:hidden. -->
    <div class="pswp__scroll-wrap">
-     <!-- Container that holds slides.
-                         PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                         Don't modify these 3 pswp__item elements, data is added later on. -->
+     <!-- Container that holds slides. PhotoSwipe keeps only 3 of them in the DOM to save memory. Don't modify these 3 pswp__item elements, data is added later on. -->
      <div class="pswp__container">
        <div class="pswp__item"></div>
        <div class="pswp__item"></div>
@@ -72,7 +61,7 @@
          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-         <!-- element will get class pswp__preloader--active when preloader is running -->
+         <!-- element will get class pswp__preloader active when preloader is running -->
          <div class="pswp__preloader">
            <div class="pswp__preloader__icn">
              <div class="pswp__preloader__cut">
@@ -84,8 +73,8 @@
        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
          <div class="pswp__share-tooltip"></div>
        </div>
-       <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-       <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+       <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"><ion-icon name="arrow-round-back"></ion-icon></button>
+       <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"><ion-icon name="arrow-round-forward"></ion-icon></button>
        <div class="pswp__caption">
          <div class="pswp__caption__center"></div>
        </div>
@@ -97,7 +86,7 @@
    <div class="row">
     @foreach($pictures as $picture)
      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-md-3 col-sm-4 gallery-item mx-auto">
-       <a href="{{ asset('storage/'. $picture->img) }}" itemprop="contentUrl" data-size="1440x960" class="">
+       <a href="{{ asset('storage/'. $picture->img) }}" itemprop="contentUrl" data-size="{{ $picture->resolution }}" class="">
          <img src="{{ asset('storage/'. $picture->img) }}" itemprop="thumbnail" alt="Image description" class="vertical-image img-rounded img-responsive card"
          />
        </a>

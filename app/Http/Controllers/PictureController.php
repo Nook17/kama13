@@ -9,7 +9,7 @@ class PictureController extends Controller
 {
  public function index()
  {
-  $pictures = Picture::all();
+  $pictures = Picture::orderBy('created_at', 'DESC')->get();
   return view('admin.picture.index', compact('pictures'));
  }
 
@@ -27,11 +27,16 @@ class PictureController extends Controller
 
     $picture              = new Picture;
     $picture->description = $request->description;
-    $picture->img         = $upload_path;
+    if ($request->resolution == null) {
+     $picture->resolution = '1440x960';
+    } else {
+     $picture->resolution = $request->resolution;
+    }
+    $picture->img = $upload_path;
     $picture->save();
    }
 
-   $pictures = Picture::all();
+   $pictures = Picture::orderBy('created_at', 'DESC')->get();
    return view('admin.picture.index', compact('pictures'));
   }
  }
@@ -44,24 +49,31 @@ class PictureController extends Controller
 
  public function update(Request $request, Picture $picture)
  {
+  // var_dump($picture->resolution);
+  // exit;
   if ($request->img) {
-   	$picture = Picture::findOrFail($picture->id);
+   $foto = Picture::findOrFail($picture->id);
 
-    $fileName    = $request->img->getClientOriginalName();
-    $upload_path = $request->img->storeAs('upload_gallery', $fileName, 'public');
+   $fileName    = $request->img->getClientOriginalName();
+   $upload_path = $request->img->storeAs('upload_gallery', $fileName, 'public');
 
-    $picture->description = $request->description;
-    $picture->img         = $upload_path;
-    $picture->save();
-   } 
+   $foto->description = $request->description;
+   if ($request->resolution != $picture->resolution) {
+    $foto->resolution = $request->resolution;
+   } else {
+    $foto->resolution = '1440x960';
+   }
+   $foto->img = $upload_path;
+   $foto->save();
+  }
 
-   $pictures = Picture::all();
-   return view('admin.picture.index', compact('pictures'));
+  $pictures = Picture::orderBy('created_at', 'DESC')->get();
+  return view('admin.picture.index', compact('pictures'));
  }
 
  public function destroy(Picture $picture)
  {
- 	$picture = Picture::findOrFail($picture->id)->delete();
- 	return back();
+  $picture = Picture::findOrFail($picture->id)->delete();
+  return back();
  }
 }

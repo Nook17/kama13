@@ -49,7 +49,8 @@
             <td>{{ $post->title }}</td>
             <td>{{ $post->subtitle }}</td>
             <td>{{ $post->slug }}</td>
-            <td><img src="{{ asset('/storage/post/' . $post->img) }}" alt="Zdjęcie" width="100"></td>
+            {{-- <td><img src="{{ asset('/storage/post/' . $post->img) }}" alt="Zdjęcie" width="100"></td> --}}
+            <td><img src="{{ asset('storage/' . $post->img) }}" alt="Zdjęcie" width="100"></td>
             <td>
               @foreach ($post->categories as $category)
                 {{ $category->name }}

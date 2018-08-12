@@ -22,7 +22,8 @@
                   <div class="fileinput-new thumbnail">
                     <img src="
                     @if($post->img)
-                    {{ asset('/storage/post/' . $post->img) }}
+                    {{-- {{ asset('/storage/post/' . $post->img) }} --}}
+                    {{ asset('storage/' . $post->img) }}
                     @else
                     {{ asset('img/image_placeholder.jpg') }}
                     @endif

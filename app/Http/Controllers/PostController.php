@@ -41,10 +41,15 @@ class PostController extends Controller
   $post->slug     = $request->slug;
 
   if ($request->file('img')) {
-   $post_img_path = 'public/post';
-   $upload_path   = $request->file('img')->store($post_img_path);
-   $post_filename = str_replace($post_img_path . '/', '', $upload_path);
-   $post->img     = $post_filename;
+   // $post_img_path = 'public/post';
+   // $upload_path   = $request->file('img')->store($post_img_path);
+   // $post_filename = str_replace($post_img_path . '/', '', $upload_path);
+   
+   $fileName    = $request->img->getClientOriginalName();
+   $upload_path = $request->img->storeAs('post', $fileName, 'public');
+   
+   // $post->img     = $post_filename;
+   $post->img = $upload_path;
   }
 
   $post->save();
@@ -82,11 +87,15 @@ class PostController extends Controller
   $post->subtitle = $request->subtitle;
   $post->slug     = $request->slug;
 
-  if ($request->file('img')) {
-   $post_img_path = 'public/post';
-   $upload_path   = $request->file('img')->store($post_img_path);
-   $post_filename = str_replace($post_img_path . '/', '', $upload_path);
-   $post->img     = $post_filename;
+  if ($request->img) {
+   // $post_img_path = 'public/post';
+   // $upload_path   = $request->file('img')->store($post_img_path);
+   // $post_filename = str_replace($post_img_path . '/', '', $upload_path);
+   // $post->img     = $post_filename;
+
+   $fileName    = $request->img->getClientOriginalName();
+   $upload_path = $request->img->storeAs('post', $fileName, 'public');
+   $post->img   = $upload_path;
   }
 
   $post->save();

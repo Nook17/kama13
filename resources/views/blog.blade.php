@@ -25,7 +25,8 @@
      <div class="card card-plain card-blog text-center">
       <div class="card-image">
        <a href="{{ route('post', $post->slug) }}">
-        <img class="img img-raised" src="{{ asset('/storage/post/' . $post->img) }}" />
+        {{-- <img class="img img-raised" src="{{ asset('/storage/post/' . $post->img) }}" /> --}}
+        <img class="img img-raised" src="{{ asset('storage/' . $post->img) }}" />
        </a>
       </div>
       <div class="card-body">

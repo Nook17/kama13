@@ -18,7 +18,7 @@
              <label class="col-sm-2 col-form-label">Galeria</label>
              <div class="col-sm-10">
                <div class="form-group">
-                 <select class="selectpicker" data-style="select-with-transition" multiple title="Galeria" data-size="7" name="pictures[]">
+                 <select class="selectpicker" data-style="select-with-transition" multiple title="Galeria" data-size="15" name="pictures[]">
                    @foreach($pictures as $picture)
                      <option value="{{ $picture->id }}">{{ $picture->description }}</option>
                    @endforeach
@@ -31,7 +31,7 @@
               <label class="col-sm-2 col-form-label">Kategoria</label>
               <div class="col-sm-10">
                 <div class="form-group">
-                  <select class="selectpicker" data-style="select-with-transition" multiple title="Kategoria" data-size="7" name="categories[]">
+                  <select class="selectpicker" data-style="select-with-transition" multiple title="Kategoria" data-size="15" name="categories[]">
                     @foreach($categories as $category)
                       <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach

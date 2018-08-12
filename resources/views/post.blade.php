@@ -37,18 +37,20 @@
                       <span class="badge badge-default">{{ $postCategory->name }}</span>
                     @endforeach
                  </div>
-                 <div class="col-md-4 ml-auto">
+                 <div class="col-md-5 ml-auto">
                    <div class="sharing">
                      <h5>Udostępnij</h5>
-                     <button class="btn btn-just-icon btn-twitter">
-                       <i class="fa fa-twitter"></i>
-                     </button>
-                     <button class="btn btn-just-icon btn-facebook">
-                       <i class="fa fa-facebook"> </i>
-                     </button>
-                     <button class="btn btn-just-icon btn-google">
-                       <i class="fa fa-google"> </i>
-                     </button>
+                     <div class="row">
+                       <div class="col">
+                         <div class="fb-share-button" data-href="https://kama13.pl" data-layout="button" data-size="small" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkama13.pl%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                       </div>
+                       <div class="col">
+                         <div class="g-plus" data-action="share" data-href="https://kama13.pl"></div>
+                       </div>
+                       <div class="col">
+                         <div><a class="twitter-share-button" href="https://kama13.pl">Tweet</a></div>
+                       </div>
+                     </div>
                    </div>
                  </div>
                </div>
@@ -66,24 +68,14 @@
            <legend></legend>
            <div class="container">
              <div class="row">
-               <div class="col-md-4">
-                 <a href="#">
-                   <img src="/img/sections/damir-bosnjak.jpg" alt="Opis zdjęcia" class="img-rounded img-responsive">
-                 </a>
-                 <p class="blog-title">My Review of Pitchfork’s ‘Indie 500’</p>
-               </div>
-               <div class="col-md-4">
-                 <a href="#">
-                   <img src="/img/sections/por7o.jpg" alt="Opis zdjęcia" class="img-rounded img-responsive">
-                 </a>
-                 <p class="blog-title">Top Events This Month</p>
-               </div>
-               <div class="col-md-4">
-                 <a href="#">
-                   <img src="/img/sections/gerrit-vermeulen.jpg" alt="Opis zdjęcia" class="img-rounded img-responsive">
-                 </a>
-                 <p class="blog-title">You Should Get Excited About Virtual Reality.</p>
-               </div>
+              @foreach($last_posts as $last_post)
+                <div class="col-md-4">
+                  <a href="{{ route('post', $last_post->slug) }}">
+                    <img src="{{ asset('storage/' . $last_post->img) }}" alt="{{ $last_post->subtitle }}" class="img-rounded img-responsive" style="width: 350px; height: 233px;">
+                  </a>
+                  <p class="blog-title">{{ $last_post->title }}</p>
+                </div>
+               @endforeach
              </div>
            </div>
          </div>

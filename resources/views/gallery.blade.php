@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="page-header page-header-small" style="background-image: url('/img/sections/gallery-1440.jpg');">
+<div class="page-header page-header-small" style="background-image: url('{{ asset('img/sections/gallery-1440.jpg') }}')">
  <div class="filter"></div>
  <div class="content-center">
    <div class="container">
@@ -100,7 +100,7 @@
 </div> <!-- section -->
 
 <!-- ********* NEWSLETTER ********* -->
-<div class="subscribe-line subscribe-line-transparent" style="background-image: url('/img/sections/technology.jpg')">
+<div class="subscribe-line subscribe-line-transparent" style="background-image: url('{{ asset('img/sections/technology.jpg') }}')">
  <div class="container">
   <div class="row">
    <div class="col-lg-9 col-md-8 col-sm-8">

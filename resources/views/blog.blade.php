@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
- <div class="page-header" style="background-image: url('/img/photo-blog.jfif')">
+ <div class="page-header" style="background-image: url('{{ asset('img/sections/photo-blog.jfif') }}')">
   <div class="filter"></div>
   <div class="content-center">
    <div class="motto">

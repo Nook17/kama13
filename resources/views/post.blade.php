@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="page-header" data-parallax="true" style="background-image: url('/img/sections/uriel-soberanes.jpg')">
+<div class="page-header" data-parallax="true" style="background-image: url('{{ asset('img/sections/uriel-soberanes.jpg') }}')">
  <div class="filter"></div>
  <div class="content-center">
    <div class="motto">

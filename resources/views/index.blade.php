@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="page-header" style="background-image: url('{{ asset('img/menu_site.jpg') }}')">
+<div class="page-header" style="background-image: url('{{ asset('img/sections/tlo1-blog.JPG') }}')">
  <div class="filter"></div>
  <div class="content-center">
   <div class="motto">
@@ -29,7 +29,7 @@
         </li>
         @foreach($categories as $category)
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('index_category', $category->id) }}" >{{ $category->name }}</a>
+            <a class="nav-link" href="{{ route('index_category', $category->id) }}">{{ $category->name }}</a>
           </li>
         @endforeach
     </ul>
@@ -64,7 +64,7 @@
 </div> <!-- section -->
 
 <!-- ********* NEWSLETTER ********* -->
-<div class="subscribe-line subscribe-line-transparent" style="background-image: url('/img/sections/technology.jpg')">
+<div class="subscribe-line subscribe-line-transparent" style="background-image: url('{{ asset('img/sections/technology.jpg') }}')">
  <div class="container">
   <div class="row">
    <div class="col-lg-9 col-md-8 col-sm-8">

@@ -112,8 +112,8 @@
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 500px;" class="wrapper">
                 <tr>
                     <td align="center" valign="top" style="padding: 15px 0;" class="logo">
-                        <a href="http://nook17.pl" target="_blank">
-                            <img alt="Logo" src="http://nook17.pl/user/assets/img/nook/Nook17_1_1_150_kwadrat.png" width="60" height="60" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px;" border="0">
+                        <a href="https://kama13.pl" target="_blank">
+                            <img alt="Logo" src="https://www.kama13.pl/img/logo_640.png" width="60" height="60" style="display: block; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px;" border="0">
                         </a>
                     </td>
                 </tr>
@@ -291,9 +291,9 @@
                     <td align="center" style="font-size: 12px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color:#666666;">
                         Copyright &copy;&nbsp;{{ date('Y') }}&nbsp;<a href="mailto:fiolka@nook17.pl" class="btn btn-simple" style="padding: 5px;"> fiolka@nook17.pl </a>&nbsp;‐&nbsp;All Rights Reserved                        
                         <br>
-                        <a href="http://localhost:8000/newsletter_delete/{{ $code }}" target="_blank" style="color: #666666; text-decoration: none;">Unsubscribe </a>
+                        <a href="https://kama13.pl/newsletter_delete/{{ $code }}" target="_blank" style="color: #666666; text-decoration: none;">Unsubscribe </a>
                         <span style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <a href="http://kama13.pl" target="_blank" style="color: #666666; text-decoration: none;"> Kama13.pl</a>
+                        <a href="https://kama13.pl" target="_blank" style="color: #666666; text-decoration: none;"> Kama13.pl</a>
                     </td>
                 </tr>
             </table>

@@ -11,7 +11,9 @@
 [class*="projects-"] {
   padding: 0;
 }
-.contact-page .section:first-of-type, .discover .section:first-of-type, .search-page .section:first-of-type {
+.contact-page .section:first-of-type,
+.discover .section:first-of-type,
+.search-page .section:first-of-type {
   padding-top: 2rem;
 }
 .nav-link {
@@ -44,4 +46,7 @@
 .card .n_card,
 .n_text_black {
   color: #000;
+}
+.blog_post p {
+  font-size: 18px;
 }

@@ -2,7 +2,7 @@
 @section('content')
 
 <!--     *********    CONTACT US 1     *********      -->
-<div class="section section-contactus cd-section section-image" id="contact-us" style="background-image: url('/img/sections/soroush-karimi.jpg')">
+<div class="section section-contactus cd-section section-image" id="contact-us" style="background-image: url('{{ asset('img/sections/soroush-karimi.jpg') }}')">
   <div class="contactus-1 ">
     <div class="container">
       <div class="row">

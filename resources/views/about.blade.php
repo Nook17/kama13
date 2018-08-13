@@ -26,7 +26,7 @@
            <div class="card-body">
              <div class="card-avatar">
                <a href="about-us.html#avatar">
-                 <img src="/img/faces/Ja.jpg" alt="Wioletka">
+                 <img src="{{ asset('img/faces/Wioletta.jpg') }}" alt="Wioletka">
                </a>
              </div>
              <p class="card-description n_card text-center">To ja truteń szydełkowy</p>
@@ -49,7 +49,7 @@
            <div class="card-body">
              <div class="card-avatar">
                <a href="about-us.html#avatar">
-                 <img src="/img/faces/Kamila.jpg" alt="Kamilka">
+                 <img src="{{ asset('img/faces/Kamila.jpg') }}" alt="Kamilka">
                  {{-- <h4 class="card-title">Sophia West</h4> --}}
                </a>
              </div>
@@ -73,7 +73,7 @@
            <div class="card-body">
              <div class="card-avatar">
                <a href="about-us.html#avatar">
-                 <img src="/img/faces/Konrad.jpg" alt="Konradek">
+                 <img src="{{ asset('img/faces/Konrad.jpg') }}" alt="Konradek">
                  {{-- <h4 class="card-title">Lucas Andrew</h4> --}}
                </a>
              </div>

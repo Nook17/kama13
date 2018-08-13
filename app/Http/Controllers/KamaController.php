@@ -63,7 +63,7 @@ class KamaController extends Controller
    $message->subject($data['subject']);
   });
 
-  $contact          = new contact();
+  $contact          = new Contact();
   $contact->nick    = $request->input('nick');
   $contact->email   = $request->input('email');
   $contact->phone   = $request->input('phone');
@@ -100,9 +100,10 @@ class KamaController extends Controller
    $message->subject($data['subject']);
   });
 
-  $news        = new newsletter();
-  $news->email = $request->input('email');
-  $news->code  = $code;
+  $news         = new Newsletter();
+  $news->email  = $request->input('email');
+  $news->code   = $code;
+  $news->status = 1;
   $news->save();
 
   return view('newsletter.newsletter_send');
@@ -130,14 +131,40 @@ class KamaController extends Controller
    $message->from('fiolka@nook17.pl');
    $message->subject($data['subject']);
   });
-  newsletter::where('code', $code)->delete();
+  Newsletter::where('code', $code)->delete();
 
   return view('newsletter.newsletter_delete');
  }
 
  public function newsletter_post()
  {
+  $subscribers = Newsletter::all();
 
+  foreach ($subscribers as $subscriber) {
+   if ($subscriber->status == 1) {
+    $data = array(
+     'email'   => $subscriber->email,
+     'subject' => 'Newsletter ze strony Kama 13 - Puszek Kłębuszek',
+     'code'    => $subscriber->code,
+     'posts'   => post::orderBy('created_at', 'DESC')->paginate(1),
+
+    );
+    Mail::send('emails.postNewsletter', $data, function ($message) use ($data) {
+     $message->to($data['email']);
+     $message->from('fiolka@nook17.pl');
+     $message->subject($data['subject']);
+    });
+   }
+  }
+
+  $manufactured = Manufacture::all();
+  $images       = Picture::all();
+  $posts        = Post::all();
+  $categories   = Category::all();
+  $newsletters  = Newsletter::all();
+  $contacts     = Contact::all();
+
+  return view('admin.index', compact('posts', 'categories', 'manufactured', 'images', 'newsletters', 'contacts'));
  }
 
  public function blog()

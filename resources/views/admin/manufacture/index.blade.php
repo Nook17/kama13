@@ -6,7 +6,7 @@
    <div class="row">
     <div class="col-md-12">
      <div class="card">
-      <div class="card-header card-header-primary card-header-icon">
+      <div class="card-header card-header-success card-header-icon">
        <div class="card-icon">
         <i class="material-icons">gavel</i>
        </div>
@@ -14,7 +14,7 @@
       </div>
       <div class="card-body">
        <div class="toolbar text-center">
-        <a href="{{ route('manufacture.create') }}" class="btn btn-success">Dodaj Produkt</a>
+        <a href="{{ route('manufacture.create') }}" class="btn btn-outline-success btn-sm">Dodaj Produkt</a>
        </div>
        <div class="material-datatables">
         <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">

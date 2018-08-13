@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Newsletter from the Nook17.pl</title>
+<title>Newsletter od Kama13</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -137,13 +137,6 @@
                     <td>
                         <!-- HERO IMAGE -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
-{{--                             <tr>
-                              	<td class="padding" align="center">
-                                    <a href="http://nook17.pl" target="_blank">
-                                        <img src="http://nook17.pl/assets/Email/apple-800_534.jpg" width="500" height="400" border="0" alt="Insert alt text here" style="display: block; color: #666666;  font-family: Helvetica, arial, sans-serif; font-size: 16px;" class="img-max">
-                                    </a>
-                                </td>
-                            </tr> --}}
                             <tr>
                                 <td>
                                     <!-- COPY -->
@@ -170,7 +163,7 @@
                                             <td align="center" style="padding-top: 25px;" class="padding">
                                                 <table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
                                                     <tr>
-                                                    	<td align="center" style="border-radius: 3px;" bgcolor="#256F9C"><a href="http://nook17.pl" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" class="mobile-button">Wróć do Bloga &rarr;</a></td>
+                                                    	<td align="center" style="border-radius: 3px;" bgcolor="#256F9C"><a href="https://kama13.pl" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #256F9C; display: inline-block;" class="mobile-button">Wróć do Bloga &rarr;</a></td>
                                                     </tr>
                                                 </table>
                                             </td>

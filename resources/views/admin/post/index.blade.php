@@ -6,7 +6,7 @@
    <div class="row">
     <div class="col-md-12">
      <div class="card">
-      <div class="card-header card-header-primary card-header-icon">
+      <div class="card-header card-header-rose card-header-icon">
        <div class="card-icon">
         <i class="material-icons">web</i>
        </div>
@@ -14,7 +14,7 @@
       </div>
       <div class="card-body">
        <div class="toolbar text-center">
-        <a href="{{ route('post.create') }}" class="btn btn-success">Dodaj Post</a>
+        <a href="{{ route('post.create') }}" class="btn btn-outline-success btn-sm">Dodaj Post</a>
        </div>
        <div class="material-datatables">
         <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
@@ -67,7 +67,7 @@
                 @method('DELETE')
               </form>
               <a href="" onclick="
-                if(confirm('Are you sure, You Want to delete this ?')) {
+                if(confirm('Jesteś pewny, że chcesz to USUNĄĆ ???')) {
                   event.preventDefault();
                   document.getElementById('delete-form-{{$post->id}}').submit();
                 } else {

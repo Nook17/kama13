@@ -26,6 +26,8 @@ Route::group(['middleware' => ['auth']], function () {
  Route::resource('/admin/picture', 'PictureController', ['except' => ['show']]);
  Route::resource('/admin/post', 'PostController', ['except' => ['show']]);
  Route::resource('/admin/category', 'CategoryController', ['except' => ['show']]);
+ Route::resource('/admin/newsletter', 'NewsletterController', ['except' => ['show', 'create', 'store']]);
+ Route::resource('/admin/contact', 'ContactController', ['except' => ['create', 'store', 'edit', 'update']]);
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');

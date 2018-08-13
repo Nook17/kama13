@@ -11,7 +11,7 @@
 
     <div class="user">
      <div class="photo">
-      <img src="{{ asset('/img/faces/mama.JPG') }}" />
+      <img src="{{ asset('/img/faces/Wioletta.jpg') }}" />
      </div>
      <div class="user-info">
       <a href="{{ route('admin') }}" class="username">
@@ -29,26 +29,38 @@
      </li>
      <li class="nav-item ">
       <a class="nav-link" href="{{ route('manufacture.index') }}">
-       <i class="material-icons">gavel</i>
-       <p>Produkcja</p>
+       <i class="material-icons text-success">gavel</i>
+       <p>Produkty</p>
       </a>
      </li>
      <li class="nav-item ">
       <a class="nav-link" href="{{ route('picture.index') }}">
-       <i class="material-icons">camera</i>
+       <i class="material-icons text-success">camera</i>
        <p>Zdjęcia</p>
       </a>
      </li>
      <li class="nav-item ">
       <a class="nav-link" href="{{ route('post.index') }}">
-       <i class="material-icons">web</i>
+       <i class="material-icons text-rose">web</i>
        <p>Posty</p>
       </a>
      </li>
      <li class="nav-item ">
       <a class="nav-link" href="{{ route('category.index') }}">
-       <i class="material-icons">category</i>
+       <i class="material-icons text-rose">category</i>
        <p>Kategorie</p>
+      </a>
+     </li>
+     <li class="nav-item ">
+      <a class="nav-link" href="{{ route('newsletter.index') }}">
+       <i class="material-icons text-info">local_post_office</i>
+       <p>Subskrybcje</p>
+      </a>
+     </li>
+     <li class="nav-item ">
+      <a class="nav-link" href="{{ route('contact.index') }}">
+       <i class="material-icons text-info">people</i>
+       <p>Kontakty</p>
       </a>
      </li>
     </ul>

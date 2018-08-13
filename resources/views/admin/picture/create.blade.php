@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card ">
-          <div class="card-header card-header-rose card-header-text">
+          <div class="card-header card-header-success card-header-text">
             <div class="card-text">
               <h4 class="card-title">Dodaj Galerię</h4>
             </div>

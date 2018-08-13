@@ -94,7 +94,17 @@
      </figure>
     @endforeach
    </div> <!-- my-gallery -->
+
   </div> <!-- row -->
+           
+  <!-- Komentarze -->
+  <div class="row">
+    <div class="col-md-8 ml-auto mr-auto">
+      <h3 class="text-center m-4">Napisz co o tym myślisz ...</h3>
+      <div id="disqus_thread"></div>
+    </div>
+  </div>
+
 
  </div> <!-- container -->
 </div> <!-- section -->

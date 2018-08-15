@@ -5,7 +5,7 @@
  <div class="container">
   <div class="navbar-translate">
    <a class="navbar-brand" href="{{ route('index') }}" rel="tooltip" title="Kama13" data-placement="bottom" >
-    Kama 13
+    Kama13
    </a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
     aria-expanded="false" aria-label="Toggle navigation">

@@ -4,7 +4,7 @@
  
   <div class="sidebar" data-color="rose" data-background-color="black" data-image="">
    <div class="logo text-center">
-    <a href="{{ route('index') }}" class="simple-text" target="blank">Kama 13</a>
+    <a href="{{ route('index') }}" class="simple-text" target="blank">Kama13</a>
    </div>
 
    <div class="sidebar-wrapper">

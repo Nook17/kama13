@@ -46,6 +46,16 @@
     </div>
     @endforeach
    </div>
+
+   <!-- ********* PAGINATION ********* -->
+   <div class="row">
+     <div class="col-md-12 pagination-area">
+        <ul class="pagination justify-content-center">
+          <li> {{ $posts }} </li>
+        </ul>
+     </div>
+   </div>
+
   </div>
  </div>
 @endsection

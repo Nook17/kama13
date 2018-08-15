@@ -5,7 +5,7 @@
  <div class="filter"></div>
  <div class="content-center">
   <div class="motto">
-   <h1 class="text-center">Kama 13</h1>
+   <h1 class="text-center">Kama13</h1>
    <h2 class="text-center">Puszek</h2>
    <h3 class="text-center">papier, nożyczki, maszyna ...</h3>
    <h2 class="text-center">Kłębuszek</h2>
@@ -57,6 +57,15 @@
       </div>
      </div>
     @endforeach
+  </div>
+
+  <!-- ********* PAGINATION ********* -->
+  <div class="row">
+    <div class="col-md-12 pagination-area">
+      <ul class="pagination justify-content-center">
+        <li> {{ $manufactured }} </li>
+      </ul>
+    </div>
   </div>
 
   </div> <!-- container -->

@@ -22,8 +22,10 @@
      ©
      <script>
       document.write(new Date().getFullYear())
-     </script>, made with
-     <i class="fa fa-heart heart"></i> by Kama 13
+     </script>, zrobione z
+     <i class="fa fa-heart heart"></i> przez
+     <a href="http://www.nook17.pl/about" target="_blank"> Nook17</a> dla
+     <a href="https://www.kama13.pl/about" target="_blank">  Kama13.</a>
     </span>
    </div>
   </div>

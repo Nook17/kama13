@@ -71,7 +71,7 @@
               @foreach($last_posts as $last_post)
                 <div class="col-md-4">
                   <a href="{{ route('post', $last_post->slug) }}">
-                    <img src="{{ asset('storage/' . $last_post->img) }}" alt="{{ $last_post->subtitle }}" class="img-rounded img-responsive" style="width: 350px; height: 233px;">
+                    <img src="{{ asset('storage/' . $last_post->img) }}" alt="{{ $last_post->subtitle }}" class="img-rounded img-responsive" style="">
                   </a>
                   <p class="blog-title">{{ $last_post->title }}</p>
                 </div>

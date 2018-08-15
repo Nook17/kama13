@@ -20,9 +20,10 @@
    &copy;
    <script>
     document.write(new Date().getFullYear())
-   </script>, made with
-   <i class="material-icons">favorite</i> by
-   <a href="https://www.creative-tim.com" target="_blank">Wioletta Demko</a> for kama 13.
+   </script>, zrobione z 
+   <i class="material-icons">favorite</i> przez
+   <a href="http://www.nook17.pl/about" target="_blank"> Nook17</a> dla
+   <a href="https://www.kama13.pl/about" target="_blank">  Kama13.</a>
   </div>
  </div>
 </footer>

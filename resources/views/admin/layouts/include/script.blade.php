@@ -11,13 +11,28 @@
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{ asset('admin/js/material-dashboard-pro/material-dashboard.min-v=2.0.2.js') }}" type="text/javascript"></script>
  <!-- CKEditor -->
- <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
- <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+ {{-- <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script> --}}
+ {{-- <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script> --}}
  <script>
-     $('textarea').ckeditor();
+    //  $('textarea').ckeditor();
      // $('.textarea').ckeditor(); // if class is prefered.
  </script>
-
+ <script src="{{ asset('vendor/select2/select2.full.min.js') }}"></script>
+ <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+ <script>
+     $(function () {
+       // Replace the <textarea id="editor1"> with a CKEditor
+       // instance, using default configuration.
+       CKEDITOR.replace('editor1');
+       //bootstrap WYSIHTML5 - text editor
+       $(".textarea").wysihtml5();
+     });
+ </script>
+<script>
+    $(document).ready(function() {
+      $(".select2").select2();
+    });
+  </script>
   <!-- Plugin for the momentJs  -->
   {{-- <script src="{{ asset('admin/js/plugins/moment.min.js') }}"></script> --}}
   <!--  Plugin for Sweet Alert -->

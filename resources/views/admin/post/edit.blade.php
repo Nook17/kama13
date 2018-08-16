@@ -106,7 +106,9 @@
               <label class="col-sm-2 col-form-label">Treść</label>
               <div class="col-sm-10">
                 <div class="form-group">
-                  <textarea type="text" name="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}" placeholder="Teść" row="10" col="50">{{ $post->content }}</textarea>
+                  {{-- <textarea type="text" name="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}" placeholder="Teść" row="10" col="50">{{ $post->content }}</textarea> --}}
+                  <textarea type="text" name="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}" style="width: 100%; height: 500px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" id="editor1">{{ $post->content }}</textarea>
+
                   @if ($errors->has('content'))
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('content') }}</strong>

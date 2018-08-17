@@ -101,3 +101,13 @@
 
 <div id="contactUsMap" class="big-map"></div>
 @endsection
+@section('script')
+  <!-- Plugin For Google Maps -->
+  <script  type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZCF-OiC6hsDkL3Y1kcq8UcdAHWNcTZvM"></script>
+  <script>
+    $(document).ready(function () {
+      // Javascript method's body can be found in assets/js/core/partials/_demo-object.js
+      demo.initContactUsMap();
+    });
+  </script>
+@endsection

@@ -49,23 +49,19 @@ class PictureController extends Controller
 
  public function update(Request $request, Picture $picture)
  {
-  // var_dump($picture->resolution);
-  // exit;
+  $foto = Picture::findOrFail($picture->id);
   if ($request->img) {
-   $foto = Picture::findOrFail($picture->id);
-
    $fileName    = $request->img->getClientOriginalName();
    $upload_path = $request->img->storeAs('upload_gallery', $fileName, 'public');
-
+   $foto->img = $upload_path;
+  }
    $foto->description = $request->description;
    if ($request->resolution != $picture->resolution) {
     $foto->resolution = $request->resolution;
    } else {
     $foto->resolution = '1440x960';
    }
-   $foto->img = $upload_path;
    $foto->save();
-  }
 
   $pictures = Picture::orderBy('created_at', 'DESC')->get();
   return view('admin.picture.index', compact('pictures'));

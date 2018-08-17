@@ -7,6 +7,10 @@
  @yield('content')
 </main>
 
- {{-- @include('layouts.include.nav') --}}
  @include('layouts.include.footer')
  @include('layouts.include.script')
+
+ @yield('script')
+
+</body>
+</html>

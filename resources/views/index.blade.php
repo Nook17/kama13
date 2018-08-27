@@ -48,7 +48,7 @@
          <h3 class="card-title">{{ $manufacture->title }}</h3>
          <p class="card-description">
           {{-- {!! htmlspecialchars_decode(substr($manufacture->content, 0, 150)) !!} --}}
-          <small>{{ $manufacture->created_at->format('d-m-Y') }}</small>
+          <small>{{ $manufacture->created_at->diffForHumans() }}</small>
          </p>
          <br/>
          <a href="{{ route('gallery', ['id_manufacture' => $manufacture->id, 'id_picture' => $manufacture->pictures->first()->id, 'slug' => $manufacture->slug]) }}" class="btn btn-outline-primary btn-round btn-sm">
